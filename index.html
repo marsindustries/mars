@@ -8,11 +8,16 @@
 </head>
 <body>
     <h1>MARS INDUSTRIES</h1>
-    <h2>Rwandan Time Now</h2>
+    <h2 id="time">Rwandan Time Now</h2>
     <br><br>
+    <button id="ltb">LAUNCH TIME MACHINE</button>
     <script>
-        const date = new Date();
-        document.write(date)
+        const button = document.getElementById("ltb");
+        button.addEventListener("click", ()=>{
+            const timebutton = document.getElementById("time");
+            const date = new Date();
+            timebutton.innerHTML = "Time Now: "+date;
+        })
     </script>
     
 </body>
